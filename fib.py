@@ -10,3 +10,14 @@ def fib(n):
         return 1
     return fib(n - 1) + fib(n - 2)
 
+#fib function implemented non recursively
+
+def fibnoreclist(n):
+    if n == 1:
+        return 1
+    if n == 2:
+        return [1, 1]
+    foo = [1, 1]
+    for i in range(2, n):
+        foo.append(foo[-1] + foo[-2])
+    return foo
